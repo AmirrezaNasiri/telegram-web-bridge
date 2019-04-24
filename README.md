@@ -1,3 +1,5 @@
+[برای زبان 🇮🇷 فارسی، این صفحه را بخوانید](README.fa-IR.md)
+
 ## Telegram Web Bridge
 [![Licensed under the MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
