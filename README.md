@@ -115,6 +115,7 @@ This project welcomes community contributions.
 ## License
 Code licensed under the [MIT License](LICENSE).
 
-## Useful Links
+## See Also
 * [Telegram Bot API](https://core.telegram.org/bots/api)
 * [ByteGate](https://bytegate.ir/) (our blog)
+* [تبدیل PDF به ورد](http://delix.ir/) (our sponsored service)
