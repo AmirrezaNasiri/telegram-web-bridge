@@ -9,12 +9,12 @@
 
 ![Telegram Web Bridge](assets/telegram-web-bridge-preview.png)
 
-> Telegram Web Bridge is a two-way, web-based, proxy-like application which can act as a middleman for Telegram Bot API requests (from your real application to Telegram) and Webhooks (from Telegram to your real application).   
+> Telegram Web Bridge is a bidirectional, web-based, proxy-like application which can act as a middleman for Telegram Bot API requests (from your actual application to Telegram) and Webhooks (from Telegram to your actual application).   
 > Built on [Slim framework](http://www.slimframework.com/), light-weight and works smoothly.
 
 ## What is the point?
 
-This bridge can be useful in situations in which accessing Telegram Bot API is not possible (like being hosted in a country resisting/blocking access to Telegram).
+This bridge can be useful in situations in which accessing Telegram Bot API is not possible (like being hosted in a country restricting/blocking access to Telegram).
 
 ![Communication without proxy](assets/without_proxy.png)
 
@@ -29,20 +29,19 @@ Here this bridge comes in. You can host it in outside of the blocking region, us
 ![Communication with proxy](assets/with_proxy.png)
 
 ### But there are other solutions too!
-
-Yes, there are plenty of solutions. However, not everyone can implement those solutions without technical knowledge.  
+Yes, there are plenty of other solutions too. However, not everyone can implement those solutions without technical knowledge.  
 This is a deployment-ready application built to be hosted even on a shared-hosting (since they are pretty cheap) without hassles. Simply download, extract on your shared web hosting, change few settings and done!
 
 ## Requirements
 The bridge application requires following conditions:
 * A shared-hosting, VPS or dedicated server
-* PHP version 7 with `json` extension enabled.
-* An installed SSL certificate. Can be Self-Signed but LetsEncrypt's free certificates are more hassle-free! If you have paid certificate, it's good too.
+* PHP version 7 or above with `json` extension enabled.
+* An installed SSL certificate. Can be Self-Signed but LetsEncrypts free certificates are much easier to setup! If you have a paid certificate, its good too.
 
 ## Installation
 You can either use deployment-ready archive or clone source code and build for yourself.
 
-### Deployment-ready package (Recommended for non-tech)
+### Deployment-ready Package (Recommended for non-tech)
 Visit following link and download the latest version:  
 [Download Builds](https://github.com/AmirrezaNasiri/telegram-web-bridge/releases)  
 
@@ -50,8 +49,8 @@ Unzip the content of the build into a publicly accessible directory on your shar
 
 ⛓ [Jump to next section](#configuration) to continue installation.
 
-### Clone Repository (Recommended for advanced users)
-Clone repository on your server or local computer:
+### Clone Repository (for advanced users)
+Clone this repository on your server or local computer:
 ```bash
 $ git clone https://github.com/AmirrezaNasiri/telegram-web-bridge
 ```
@@ -62,13 +61,13 @@ $ composer install
 ```
 
 #### Tests
-Basic tests for API calls are available but for webhooks, no tests are written yet.
-Create a Telegram Bot for testing purpose and start chatting with it. Open `tests/settings.php` and configurate like this:   
+Basic tests for API calls are available but for webhooks, no tests has been written yet.
+Create a Telegram bot for testing purpose and start chatting with it. Open `tests/settings.php` and configurate like this:   
 Enter the API token created for test bot:
 ```
 'botApiToken' => '123456789:aBcdEfghIjklm_nOpqRsTuvWXyZaBcDEFjhi',
 ```
-Your account's chat id (can be extracted from [@chatid_echo_bot](https://t.me/chatid_echo_bot)):
+Specify your chat id (can be extracted from [@chatid_echo_bot](https://t.me/chatid_echo_bot)):
 ```
 'chatId'      => '123456789,
 ```
@@ -84,7 +83,7 @@ All configurable settings are located and described in:
 Basically, you only need to change `appUrl`, `crtPath` and `webhookEndpoints` settings.
 
 ### Use the bridge!
-Now that everything is ready, you just need to change the request URLs from `https://api.telegram.org` to what you've set in your `appUrl`.  
+Now that everything is ready, you just need to change the request URLs from `https://api.telegram.org` to what you've set in `appUrl`.  
 For example, following request
 ```http request
 GET https://api.telegram.org/bot123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11/getMe
@@ -98,7 +97,7 @@ To receive webhook callbacks, you need to fire `setWebhook` once again:
 ```http request
 POST https://example.com/path-to/telegram-web-hook/bot123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11/setWebhook
 ```
-The bridge will inject its own `url` and `certificate` parameters according to settings you've set. So you should expect result of `getWebhookInfo` to be different than what you've sent in `setWebhook` request.  
+The bridge will inject its own `url` and `certificate` parameters according to settings you've just set. So you should expect result of `getWebhookInfo` to be different than what you've sent in `setWebhook` request.  
 On every callback from Telegram, bridge will catch and forward it to the defined URL in the settings file.
 
 #### Using an existence package to send Telegram requests?
@@ -108,12 +107,12 @@ If you're using this package in a Laravel projects, see [how to change BASE_BOT_
 
 ## Contribution 
 This project welcomes community contributions.
-* Submit security-related bugs to me using [this form](http://amirreza.in/#page-contact).
+* Submit security-related bugs to me: `hi``@``amirreza.in`.
 * [Submit any other kind of bugs](https://github.com/AmirrezaNasiri/telegram-web-bridge/issues) and issues and help us fix them.
 * [Submit pull requests](https://github.com/AmirrezaNasiri/telegram-web-bridge/pulls) for bug fixes and features and discuss existing proposals.
 
 ## License
-Code licensed under the [MIT License](LICENSE).
+Code is licensed under the [MIT License](LICENSE).
 
 ## See Also
 * [Telegram Bot API](https://core.telegram.org/bots/api)
