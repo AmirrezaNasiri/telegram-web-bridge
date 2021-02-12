@@ -16,7 +16,12 @@ $app->get('/bot{token}/{method}', function (Request $request, Response $response
 	if ($this->get('settings')['logApiCalls'])
 		$this->logger->info("API call by {$token}: '{$method}' ", ['asd']);
 
-	$url = "https://api.telegram.org/bot{$token}/{$method}";
+	$url = "https://api.telegram.org/bot{$token}/{$method}?";
+
+	if(strlen($request->getUri()->getQuery()) > 0){
+	    $url .= $request->getUri()->getQuery();
+	}
+	
 	$client = new Client([
 		'http_errors' => false,
 	]);
