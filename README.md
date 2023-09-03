@@ -1,3 +1,6 @@
+> **Warning**
+> This repository is archived for read-only purpose and is not maintained anymore. If you're a PHP developer and interested in maintaining this repository, [create a new discussion](https://github.com/AmirrezaNasiri/telegram-web-bridge/discussions/new?category=general) and let us know, please.
+
 <div dir="rtl" align="right">
 
 [🔸 برای زبان فارسی، این صفحه را بخوانید](README.fa-IR.md)
