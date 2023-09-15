@@ -9,7 +9,7 @@
 ## Telegram Web Bridge
 [![Licensed under the MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-![Telegram Web Bridge](assets/fa-IR/telegram-web-bridge-preview.png)
+![Telegram Web Bridge](assets/telegram-web-bridge-preview.png)
 
 > پکیج Telegram Web Bridge یک نرم افزار تحت وب پراکسی مانند است که به عنوان یک رابط بین اپلیکیشن شما و سرورهای تلگرام بصورت دوطرفه عمل می‌کند. این نرم افزار در یک محیط بدون محدودیت قرار گرفته و درخواست‌های ارسالی توسط اپلیکیشن شما به تلگرام را دریافت کرده و آن‌ها را از مسیری بدون محدودیت به تلگرام ارسال خواهد کرد. همچنین این نرم افزار قادر به دریافت Webhookهای تلگرام و تحویل آن به اپلیکیشن شماست.  
 > این نرم افزار برپایه فریم‌ورک سبک [Slim](https://github.com/slimphp/Slim) ساخته شده است.
