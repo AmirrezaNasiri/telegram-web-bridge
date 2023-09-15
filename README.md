@@ -10,7 +10,7 @@
 ## Telegram Web Bridge
 [![Licensed under the MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-![Telegram Web Bridge](assets/telegram-web-bridge-preview.png)
+![Telegram Web Bridge](assets/telegram-web-bridge.png)
 
 > Telegram Web Bridge is a bidirectional, web-based, proxy-like application which can act as a middleman for Telegram Bot API requests (from your actual application to Telegram) and Webhooks (from Telegram to your actual application).   
 > Built on [Slim framework](http://www.slimframework.com/), light-weight and works smoothly.
